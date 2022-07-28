@@ -14,7 +14,7 @@ public class Main {
     LongAdder total = new LongAdder();
     public static void main(String[] args) {
         LongAdder total = new LongAdder();
-        ExecutorService executorService = Executors.newFixedThreadPool(3);
+        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         List<Long> list1 = generateListValue(500, 3000);
         List<Long> list2 = generateListValue(600, 6000);
         List<Long> list3 = generateListValue(600, 6009);
